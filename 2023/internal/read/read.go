@@ -3,6 +3,8 @@ package read
 import (
 	"bufio"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func ReadLines(filename string) []string {
@@ -23,4 +25,19 @@ func ReadLines(filename string) []string {
 	}
 
 	return lines
+}
+
+func GameID(s string) int {
+	x := strings.Split(s, ":")
+	x = strings.Split(x[0], " ")
+	i, err := strconv.Atoi(x[1])
+	if err != nil {
+		panic(err)
+	}
+	return i
+}
+
+func Sets(s string) []string {
+	x := strings.Split(s, ":")
+	return strings.Split(x[1], ";")
 }
