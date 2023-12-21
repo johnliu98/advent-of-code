@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"unicode"
 
+	"github.com/johnliu98/advent-of-code/2023/internal/conv"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
-	"github.com/johnliu98/advent-of-code/2023/internal/utils"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 		locs := re.FindAllIndex([]byte(lines[i]), -1)
 		for _, loc := range locs {
 			if symbolAdjacent(lines, i, loc) {
-				ans += utils.IntFromString(lines[i][loc[0]:loc[1]])
+				ans += conv.IntFromString(lines[i][loc[0]:loc[1]])
 			}
 		}
 	}

@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
 
@@ -21,7 +22,7 @@ func main() {
 	for _, in := range input {
 		valid := true
 
-		sets := read.Sets(in)
+		sets := parse.SplitValues(in, ";")
 		for _, s := range sets {
 			colors := map[string]int{}
 			cubes := strings.Split(s, ",")
@@ -40,7 +41,7 @@ func main() {
 		}
 
 		if valid {
-			ans += read.GameID(in)
+			ans += parse.ObjID(in)
 		}
 	}
 

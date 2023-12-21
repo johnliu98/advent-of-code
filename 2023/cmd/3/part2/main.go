@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"regexp"
 
+	"github.com/johnliu98/advent-of-code/2023/internal/conv"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
-	"github.com/johnliu98/advent-of-code/2023/internal/utils"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 		partLocs := re.FindAllIndex([]byte(lines[i]), -1)
 		for _, partLoc := range partLocs {
 			if gearLoc := adjacentStarLocation(lines, i, partLoc); gearLoc[0] != 0 || gearLoc[1] != 0 {
-				gearPart := utils.IntFromString(lines[i][partLoc[0]:partLoc[1]])
+				gearPart := conv.IntFromString(lines[i][partLoc[0]:partLoc[1]])
 				gears[gearLoc] = append(gears[gearLoc], gearPart)
 			}
 		}
