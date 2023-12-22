@@ -39,3 +39,25 @@ func Numbers(s string) []int {
 
 	return nums
 }
+
+func Blocks(ss []string) [][]string {
+	var blocks [][]string
+
+	var start int
+	for i := 0; i < len(ss); i++ {
+		if ss[i] != "" {
+			continue
+		}
+
+		if len(ss[start:i]) != 0 {
+			blocks = append(blocks, ss[start:i])
+		}
+
+		start = i + 1
+	}
+	if len(ss[start:]) != 0 {
+		blocks = append(blocks, ss[start:])
+	}
+
+	return blocks
+}
