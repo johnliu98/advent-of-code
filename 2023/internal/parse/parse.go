@@ -29,7 +29,7 @@ func SplitValues(s, sep string) []string {
 }
 
 func Numbers(s string) []int {
-	re := regexp.MustCompile(`\d+`)
+	re := regexp.MustCompile(`-?\d+`)
 	byteNums := re.FindAll([]byte(s), -1)
 
 	var nums []int
