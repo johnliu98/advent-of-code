@@ -15,7 +15,7 @@ const (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/8/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	network := make(network)
 	starts := make([]node, 0)

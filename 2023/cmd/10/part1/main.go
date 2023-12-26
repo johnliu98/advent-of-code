@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	tiles := tiles(read.ReadLines("./cmd/10/input.txt"))
+	tiles := tiles(read.ReadLines("input.txt"))
 
 	var startIdx index
 	for i, row := range tiles {

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/6/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	times := parse.Numbers(lines[0])
 	distances := parse.Numbers(lines[1])

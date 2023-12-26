@@ -16,7 +16,7 @@ const (
 const cycles = 1000000000
 
 func main() {
-	platformStrings := read.ReadLines("./cmd/14/input.txt")
+	platformStrings := read.ReadLines("input.txt")
 	platform := make(platform, len(platformStrings))
 	for i, rowString := range platformStrings {
 		row := make([]rune, len(rowString))

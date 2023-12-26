@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	input := read.ReadLines("./cmd/10/input.txt")
+	input := read.ReadLines("input.txt")
 
 	tiles := make(tiles, len(input))
 	var startIdx index

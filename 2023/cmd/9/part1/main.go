@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	histories := read.ReadLines("./cmd/9/input.txt")
+	histories := read.ReadLines("input.txt")
 
 	var ans int
 	for _, h := range histories {

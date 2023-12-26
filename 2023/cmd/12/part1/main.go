@@ -16,7 +16,7 @@ const (
 )
 
 func main() {
-	records := read.ReadLines("./cmd/12/input.txt")
+	records := read.ReadLines("input.txt")
 
 	var ans int
 	for _, record := range records {

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/13/input.txt")
+	lines := read.ReadLines("input.txt")
 	patterns := parse.Blocks(lines)
 
 	var ans int

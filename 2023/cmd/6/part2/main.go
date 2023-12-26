@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/6/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	t := parseNumber(lines[0])
 	d := parseNumber(lines[1])

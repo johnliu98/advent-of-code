@@ -28,7 +28,7 @@ func hash(springs string, groups []int) string {
 }
 
 func main() {
-	records := read.ReadLines("./cmd/12/input.txt")
+	records := read.ReadLines("input.txt")
 
 	var ans int
 	for _, record := range records {

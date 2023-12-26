@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	image := image(read.ReadLines("./cmd/11/input.txt"))
+	image := image(read.ReadLines("input.txt"))
 
 	galaxies := image.findGalaxies()
 	occupiedRows, occupiedCols := image.findOccupiedRowsAndCols(galaxies)

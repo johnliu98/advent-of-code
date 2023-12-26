@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/3/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	var ans int
 	// (i, j) of '*' -> part number

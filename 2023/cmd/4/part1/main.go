@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/4/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	var ans int
 	for _, line := range lines {

@@ -12,7 +12,7 @@ const (
 )
 
 func main() {
-	platform := read.ReadLines("./cmd/14/input.txt")
+	platform := read.ReadLines("input.txt")
 
 	var ans int
 	platformLength := len(platform)

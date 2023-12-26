@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/5/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	seeds := conv.IntsFromString(lines[0])
 

@@ -13,7 +13,7 @@ const (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/8/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	network := make(map[string][2]string)
 	re := regexp.MustCompile(`\w\w\w`)

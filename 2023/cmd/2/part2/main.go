@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	input := read.ReadLines("./cmd/2/input.txt")
+	input := read.ReadLines("input.txt")
 
 	var ans int
 	for _, in := range input {

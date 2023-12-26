@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	lines := read.ReadLines("./cmd/7/input.txt")
+	lines := read.ReadLines("input.txt")
 
 	g := game{}
 	for _, line := range lines {
