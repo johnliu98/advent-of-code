@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
@@ -16,7 +17,7 @@ func main() {
 		var matches int
 
 		numCount := make(map[int]int)
-		nums := parse.Numbers(parse.Values(line))
+		nums := parse.Ints(strings.Split(line, ":")[1])
 		for _, n := range nums {
 			numCount[n]++
 		}

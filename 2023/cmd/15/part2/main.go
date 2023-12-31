@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/johnliu98/advent-of-code/2023/internal/conv"
+	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
 
@@ -23,7 +23,7 @@ func main() {
 		h := hash(lens)
 		itemIndex := getIndex(boxes[h], lens)
 		if n := step[len(step)-1]; unicode.IsNumber(rune(n)) {
-			focalLength := conv.IntFromString(string(n))
+			focalLength := parse.Int(string(n))
 			if itemIndex != -1 {
 				boxes[h][itemIndex].focalLength = focalLength
 			} else {

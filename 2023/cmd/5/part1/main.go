@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/johnliu98/advent-of-code/2023/internal/conv"
 	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
@@ -12,13 +11,13 @@ import (
 func main() {
 	lines := read.ReadLines("input.txt")
 
-	seeds := conv.IntsFromString(lines[0])
+	seeds := parse.Ints(lines[0])
 
 	blocks := parse.Blocks(lines[1:])
 	mapsPerCategory := make([][][]int, len(blocks))
 	for i, block := range blocks {
 		for _, m := range block[1:] {
-			mapsPerCategory[i] = append(mapsPerCategory[i], conv.IntsFromString(m))
+			mapsPerCategory[i] = append(mapsPerCategory[i], parse.Ints(m))
 		}
 	}
 

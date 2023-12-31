@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/johnliu98/advent-of-code/2023/internal/conv"
+	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
 
@@ -17,7 +17,7 @@ func main() {
 	for _, instruction := range digPlan {
 		split := strings.Split(instruction, " ")
 		d := direction(split[0][0])
-		count := conv.IntFromString(split[1])
+		count := parse.Int(split[1])
 
 		next := current.move(d, count)
 

@@ -5,7 +5,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
 
@@ -15,7 +14,7 @@ func main() {
 	var ans int
 	for _, in := range input {
 		colors := map[string]int{}
-		for _, s := range parse.SplitValues(in, ";") {
+		for _, s := range strings.Split(strings.Split(in, ":")[1], ";") {
 			for _, cube := range strings.Split(s, ",") {
 				x := strings.Split(strings.Trim(cube, " "), " ")
 

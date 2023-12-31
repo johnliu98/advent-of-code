@@ -22,7 +22,7 @@ func main() {
 	for _, record := range records {
 		split := strings.Split(record, " ")
 		springs := split[0]
-		groups := parse.Numbers(split[1])
+		groups := parse.Ints(split[1])
 
 		numUnknownDamaged := sum(groups)
 		var unknowns []int

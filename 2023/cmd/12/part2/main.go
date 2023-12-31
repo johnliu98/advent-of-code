@@ -35,10 +35,10 @@ func main() {
 		split := strings.Split(record, " ")
 
 		springs := split[0]
-		groups := parse.Numbers(split[1])
+		groups := parse.Ints(split[1])
 		for i := 0; i < numFolds-1; i++ {
 			springs += string(unknown) + split[0]
-			groups = append(groups, parse.Numbers(split[1])...)
+			groups = append(groups, parse.Ints(split[1])...)
 		}
 
 		ans += numValid(springs, groups)

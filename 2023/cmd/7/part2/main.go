@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/johnliu98/advent-of-code/2023/internal/conv"
+	"github.com/johnliu98/advent-of-code/2023/internal/parse"
 	"github.com/johnliu98/advent-of-code/2023/internal/read"
 )
 
@@ -16,7 +16,7 @@ func main() {
 	for _, line := range lines {
 		split := strings.Split(line, " ")
 		g.hands = append(g.hands, hand(split[0]))
-		g.bids = append(g.bids, conv.IntFromString(split[1]))
+		g.bids = append(g.bids, parse.Int(split[1]))
 	}
 
 	sort.Sort(g)

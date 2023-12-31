@@ -12,7 +12,7 @@ func main() {
 
 	var ans int
 	for _, h := range histories {
-		history := parse.Numbers(h)
+		history := parse.Ints(h)
 		ans += extrapolate(history)
 	}
 

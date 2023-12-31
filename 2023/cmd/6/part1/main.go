@@ -11,8 +11,8 @@ import (
 func main() {
 	lines := read.ReadLines("input.txt")
 
-	times := parse.Numbers(lines[0])
-	distances := parse.Numbers(lines[1])
+	times := parse.Ints(lines[0])
+	distances := parse.Ints(lines[1])
 
 	ans := 1
 	for i := 0; i < len(times); i++ {

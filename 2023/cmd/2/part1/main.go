@@ -22,7 +22,7 @@ func main() {
 	for _, in := range input {
 		valid := true
 
-		sets := parse.SplitValues(in, ";")
+		sets := strings.Split(strings.Split(in, ":")[1], ";")
 		for _, s := range sets {
 			colors := map[string]int{}
 			cubes := strings.Split(s, ",")
@@ -41,7 +41,7 @@ func main() {
 		}
 
 		if valid {
-			ans += parse.ObjID(in)
+			ans += parse.Int(strings.Split(strings.Split(in, ":")[0], " ")[1])
 		}
 	}
 
