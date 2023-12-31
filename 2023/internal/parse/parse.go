@@ -23,6 +23,14 @@ func Ints(s string) []int {
 	return ints
 }
 
+func Hex(s string) int {
+	i, err := strconv.ParseInt(s, 16, 0)
+	if err != nil {
+		panic(err)
+	}
+	return int(i)
+}
+
 func Blocks(ss []string) [][]string {
 	var blocks [][]string
 
