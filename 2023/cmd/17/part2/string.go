@@ -6,17 +6,6 @@ import (
 	"strings"
 )
 
-func (g grid) stringLoss() string {
-	var s string
-	for i, row := range g {
-		for j := range row {
-			s += strconv.Itoa(g[i][j][0].loss)
-		}
-		s += fmt.Sprintln()
-	}
-	return s[:len(s)-1]
-}
-
 func (g grid) stringPath(goal *cell, parent map[*cell]*cell) string {
 	stringGrid := make([][]string, len(g))
 	for i, row := range g {

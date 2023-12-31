@@ -112,21 +112,6 @@ func (g grid) sendBeam(b beam) {
 	}
 }
 
-func (g grid) stringEnergized() string {
-	var s string
-	for i, row := range g.tiles {
-		for j := range row {
-			if _, ok := g.energized[index{i: i, j: j}]; ok {
-				s += string('#')
-			} else {
-				s += string('.')
-			}
-		}
-		s += fmt.Sprintln()
-	}
-	return s
-}
-
 func (g grid) get(i index) byte {
 	return g.tiles[i.i][i.j]
 }
